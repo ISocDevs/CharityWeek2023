@@ -168,3 +168,11 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
+
+.inline-grid {
+  display: inline-grid;
+}
+
+.red{
+  background-color: red;
+}
