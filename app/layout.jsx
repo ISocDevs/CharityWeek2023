@@ -1,5 +1,5 @@
 import '@styles/globals.css'
-import Nav from '@components/Nav'
+import Nav from '@components/nav'
 
 export const metadata = {
     title: 'Charity Week | Imperial College London',
@@ -8,7 +8,7 @@ export const metadata = {
 
 const RootLayout = ({children}) => {
   return (
-      <hmtl lang='en'>
+      <html lang='en'>
           <body>
               <div className='main'>
                   <div className='gradient'/>
@@ -18,7 +18,7 @@ const RootLayout = ({children}) => {
                   {children}
               </main>
           </body>
-    </hmtl>
+    </html>
   )
 }
 
