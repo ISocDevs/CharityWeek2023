@@ -2,12 +2,14 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { scrollIntoView } from "seamless-scroll-polyfill";
 
 
 const Nav = () => {
     const [activeTab, setActiveTab] = useState('#home')
+    const [clientWindowHeight, setClientWindowHeight] = useState("")
+    const tabs = ['Home', 'About', 'Events', 'Contact', 'Sponsors']
 
     const scrollToSection = (sectionId) => {
     const section = document.querySelector(sectionId);
@@ -16,6 +18,24 @@ const Nav = () => {
         scrollIntoView(section, {behavior: 'smooth'})
     }
     };
+    
+    const handleScroll = () => {
+        setClientWindowHeight(window.scrollY);
+    };
+
+    useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+    
+    useEffect(() => {
+        const closestTab = tabs.reduce((prev, curr) => {
+            const el = document.querySelector('#' + curr.toLowerCase())
+            const pre_el = document.querySelector('#' + prev.toLowerCase())
+            return (Math.abs(el.getBoundingClientRect().top - 0) <= Math.abs(pre_el.getBoundingClientRect().top - 0) ? curr : prev)
+        })
+        setActiveTab('#' + closestTab.toLowerCase())
+    },[clientWindowHeight])
 
     return (
       <nav className='flex-between w-full pt-3 fixed md:px-10 px-3 top-0 backdrop-blur bg-white/20 shadow-lg'>
