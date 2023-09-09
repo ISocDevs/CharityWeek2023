@@ -2,23 +2,26 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { scrollIntoView } from "seamless-scroll-polyfill";
+
+const NavbarContext = createContext()
 
 
 const Nav = () => {
     const [activeTab, setActiveTab] = useState('#home')
     const [clientWindowHeight, setClientWindowHeight] = useState("")
     const tabs = ['Home', 'About', 'Events', 'Contact', 'Sponsors']
-
-    const scrollToSection = (sectionId) => {
-    const section = document.querySelector(sectionId);
-        if (section) {
-        setActiveTab(sectionId)
-        scrollIntoView(section, {behavior: 'smooth'})
-    }
-    };
     
+    const scrollToSection = (sectionId) => {
+        console.log(sectionId);
+        const section = document.querySelector(sectionId);
+        if (section) {
+            setActiveTab(sectionId)
+            scrollIntoView(section, {behavior: 'smooth'})
+        }
+    };
+
     const handleScroll = () => {
         setClientWindowHeight(window.scrollY);
     };
@@ -52,41 +55,28 @@ const Nav = () => {
 
           {/* Desktop Navigation */}
           <div className='sm:flex hidden'>
-              <div className='flex gap-3'>
-                  <Link href='#home'
-                        className={`black_btn ${activeTab === '#home' && 'active'}`}
-                        scroll={false}
-                    onClick={() => scrollToSection('#home')}>
-                      Home
-                  </Link>
-                  <Link href='#about'
-                        className={`black_btn ${activeTab === '#about' && 'active'}`}
-                        scroll={false}
-                    onClick={() => scrollToSection('#about')}>
-                      About
-                  </Link>
-                  <Link href='#events'
-                        className={`black_btn ${activeTab === '#events' && 'active'}`}
-                        scroll={false}
-                    onClick={() => scrollToSection('#events')}>
-                      Events
-                    </Link>
-                    <Link href='#contact'
-                        className={`black_btn ${activeTab === '#contact' && 'active'}`}
-                        scroll={false}
-                    onClick={() => scrollToSection('#contact')}>
-                      Contact
-                    </Link>
-                    <Link href='#sponsors'
-                        className={`black_btn ${activeTab === '#sponsors' && 'active'}`}
-                        scroll={false}
-                    onClick={() => scrollToSection('#sponsors')}>
-                      Sponsors
-                  </Link>
+                <div className='flex gap-3'>
+                    <NavbarContext.Provider value={activeTab}>
+                        {tabs.map(tab =>
+                            <Tab name={tab} scrollToSection={scrollToSection} key={tab} />)}
+                    </NavbarContext.Provider>
               </div>
           </div>
             </nav>
   )
+}
+
+const Tab = ({ name, scrollToSection}) => {
+    const id = '#' + name.toLowerCase()
+    const activeTab = useContext(NavbarContext)
+    return (
+        <Link href={id}
+            className={`black_btn ${activeTab === id && 'active'}`}
+            scroll={false}
+            onClick={() => scrollToSection(id)}>
+                      {name}
+                  </Link>
+    )
 }
 
 export default Nav
