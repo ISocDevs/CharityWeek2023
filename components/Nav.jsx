@@ -14,7 +14,6 @@ const Nav = () => {
     const tabs = ['Home', 'About', 'Events', 'Contact', 'Sponsors']
     
     const scrollToSection = (sectionId) => {
-        console.log(sectionId);
         const section = document.querySelector(sectionId);
         if (section) {
             setActiveTab(sectionId)
