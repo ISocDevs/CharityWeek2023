@@ -46,9 +46,9 @@ const Nav = () => {
     },[clientWindowHeight])
 
     return (
-        <nav className='flex-between w-full py-2 fixed lg:px-10 px-2 top-0 backdrop-blur bg-white/20 shadow-lg'>
+        <nav className='flex-center flex-shrink-0 w-full py-2 fixed lg:px-10 px-2 top-0 backdrop-blur bg-white/20 shadow-lg'>
             {/* Logo */}
-          <Link href="/" className='flex gap-2 flex-center'>
+          <Link href="/" className='flex gap-2 flex-center bg-red-100'>
               <Image
                   src="/assets/images/cw-logo-orange.ico"
                   alt="Charity Week Logo"
@@ -60,7 +60,7 @@ const Nav = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className='md:flex hidden justify-center'>
+          <div className='min-[800px]:flex hidden justify-center flex-grow bg-blue-100'>
                 <div className='flex lg:gap-3 gap-1'>
                     <NavbarContext.Provider value={activeTab}>
                         {tabs.map(tab =>
@@ -69,9 +69,22 @@ const Nav = () => {
                     <DonateButton style={'orange'}/>
               </div>
             </div>
+
+            {/* This exists just to make the formatting even and to have the tabs centered always
+            I tried many other methods but this one gave me my desired result */}
+            <Link href="/" className='max-[799px]:hidden flex gap-2 flex-center flex-shrink bg-red-100 opacity-0 pointer-events-none'>
+              <Image
+                  src="/assets/images/cw-logo-orange.ico"
+                  alt="Charity Week Logo"
+                  width={60}
+                  height={60}
+                  className="object-contain"
+              />
+              <p className='logo_text pr-5'>CW 2023</p>
+          </Link>
             
             {/* Mobile navigation */}
-            <div className='md:hidden flex-center w-full absolute'>
+            <div className='min-[800px]:hidden flex-center w-full absolute'>
                 <DonateButton style={'pulse large'}/>
                 </div>
             <div className='md:hidden'>
