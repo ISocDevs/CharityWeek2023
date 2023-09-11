@@ -82,11 +82,23 @@ scroll-behavior: smooth!important;
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
-.black_btn {
+.btn {
   @apply rounded-full border-2 border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
 }
 
-.black_btn.active{
+/* .donate_btn {
+  @apply rounded-full border-2 border-orange-500 bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
+} */
+
+.btn.large{
+  @apply border-4 py-3 px-10 text-lg
+}
+
+.btn.orange{
+  @apply bg-orange-500
+}
+
+.btn.active{
   @apply border-orange-500
 }
 
@@ -178,10 +190,74 @@ scroll-behavior: smooth!important;
   @apply flex justify-between items-center;
 }
 
+.flex-stretch {
+  @apply flex justify-stretch items-center;
+}
+
 .inline-grid {
   display: inline-grid;
 }
 
 .red{
   background-color: red;
+}
+
+.pulse {
+  overflow: visible;
+  position: relative;
+}
+
+.pulse::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  border-radius: inherit;
+  -webkit-transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s;
+  transition: opacity .3s, transform .3s, -webkit-transform .3s;
+  -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+          animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes pulse-animation {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
 }
