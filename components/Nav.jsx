@@ -57,7 +57,7 @@ const Nav = () => {
     }, [clientWindowHeight])
 
     return (
-        <nav className='flex-center flex-shrink-0 w-full py-2 fixed lg:px-10 px-2 min-[800px]:top-0 max-[799px]:bottom-0 backdrop-blur bg-white/20 shadow-lg'>
+        <nav className='flex-center z-30 flex-shrink-0 w-full py-2 fixed lg:px-10 px-2 min-[800px]:top-0 max-[799px]:bottom-0 backdrop-blur bg-white/20 shadow-lg'>
             {/* Logo */}
             <Link href="/" className='flex gap-2 flex-center'>
                 <Image
