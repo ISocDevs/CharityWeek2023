@@ -162,11 +162,19 @@ scroll-behavior: smooth!important;
 }
 
 .dropdown {
-  @apply absolute right-0 top-full mt-3 w-1/5 p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-center items-center;
+  @apply absolute right-0 bottom-full transition-all duration-500 ease-out mb-3 w-1/5 p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-center items-center;
 }
 
+/* .menu-enter{
+  @apply right-0 transition ease-in-out duration-300;
+}
+
+.menu-leave{
+  @apply right-100 transition ease-in-out duration-300;
+} */
+
 .dropdown_link {
-  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+  @apply text-base font-inter text-orange-500 hover:text-gray-500 font-medium py-2;
 }
 
 /* PromptCard Component */

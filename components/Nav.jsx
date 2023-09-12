@@ -57,7 +57,7 @@ const Nav = () => {
     }, [clientWindowHeight])
 
     return (
-        <nav className='flex-center flex-shrink-0 w-full py-2 fixed lg:px-10 px-2 top-0 backdrop-blur bg-white/20 shadow-lg'>
+        <nav className='flex-center flex-shrink-0 w-full py-2 fixed lg:px-10 px-2 min-[800px]:top-0 max-[799px]:bottom-0 backdrop-blur bg-white/20 shadow-lg'>
             {/* Logo */}
             <Link href="/" className='flex gap-2 flex-center'>
                 <Image
@@ -95,7 +95,7 @@ const Nav = () => {
             </Link>
 
             {/* Mobile navigation */}
-            <div className='min-[800px]:hidden flex-center w-4/5'>
+            <div className='min-[800px]:hidden flex-center w-1/2'>
                 <DonateButton style={'pulse large'} />
             </div>
             <div className='min-[800px]:hidden cursor-pointer'>
@@ -106,12 +106,13 @@ const Nav = () => {
                         width={60}
                         alt="Menu Button"
                         onClick={() => setToggleDropdown(prev => !prev)} />
-                    {toggleDropdown && <div className='dropdown'>
+                    <div className={`dropdown ${!toggleDropdown && 'translate-x-full'}`}>
                         <NavbarContext.Provider value={activeTab}>
                             {tabs.map(tab =>
-                                <Tab name={tab} scrollToSection={scrollToSection} key={tab} />)}
+                                <Tab name={tab} scrollToSection={scrollToSection} key={tab}
+                                    style='dropdown_link' />)}
                         </NavbarContext.Provider>
-                    </div>}
+                    </div>
                 </div>
             </div>
         </nav>
