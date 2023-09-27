@@ -1,19 +1,64 @@
 import DonateButton from "@components/DonateButton"
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import SearchIcon from '@mui/icons-material/Search';
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
+
 
 const Home = () => {
   return (<>
-    <section id="home" className='w-full flex-center flex-col'>
+    <section id="home" className='w-full flex-center flex-col mb-10 pt-40'>
       <h1 className='head_text text-center'>
-        <div className='mt-20'>Welcome to</div>
+        <div>Welcome to</div>
         <div className='orange_gradient'>ICL Charity Week 2023!</div>
       </h1>
-      <div className="-mb-10">
+      <div>
         <p className="desc text-center">Last year we raised £39,504.92 for schools, health centres and orphans around
           the world</p>
-        <div className="flex-center mt-5">
+        <div className="flex-center my-10">
           <DonateButton style='pulse large' />
         </div>
-        <hr className="mt-7 -mb-7" />
+        <hr />
+      </div>
+    </section>
+    <section className="flex justify-center items-start mb-10 pt-40 -mt-20 max-lg:flex-col" id="about">
+      <div className="m6  flex flex-col">
+        <div className="icon-block">
+          <h1 className="flex-center text-blue-700 text-9xl">
+            <SupervisorAccountIcon sx={{ fontSize: 60 }} />
+          </h1>
+          <h2 className="flex-center text-3xl">What is Charity Week?</h2>
+          <p className="light flex-center text-center desc">Imperial College Charity Week is an annual campaign that comprises of
+            everything
+            from activities and challenges to talks and bucket collections. The proceeds raised go towards many
+            noble causes around the world.</p>
+        </div>
+      </div>
+
+      <div className="m6 flex flex-col">
+        <div className="icon-block">
+          <h1 className="flex-center text-blue-700 text-9xl">
+            <SearchIcon sx={{ fontSize: 60 }} />
+          </h1>
+          <h2 className="flex-center text-3xl">Our vision</h2>
+          <p className="light flex-center text-center desc">Through CW, we envision a vehicle to spread Dawah across campus and beyond.
+            We wish to ensure the true message of CW lives beyond the initial hype of the campaign and the
+            efforts of charity continue long into the future. </p>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+
+      <div className="m6 flex flex-col">
+        <div className="icon-block">
+          <h1 className="flex-center text-blue-700 text-9xl">
+            <AccessibilityNewIcon sx={{ fontSize: 60 }} />
+          </h1>
+          <h2 className="flex-center text-3xl">How you can help</h2>
+          <p className="light flex-center text-center desc">From tutoring at our admissions days and coming along to our Thames Bridges
+            Trek
+            to taking part in our online quizzes and virtual auction dinner, your time and dedication will
+            make all the difference </p>
+        </div>
+      </div>
       </div>
     </section>
   )
