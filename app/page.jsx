@@ -2,6 +2,7 @@ import DonateButton from "@components/DonateButton"
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import SearchIcon from '@mui/icons-material/Search';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
+import Events from "@components/Events";
 
 
 const Home = () => {
@@ -28,7 +29,7 @@ const Home = () => {
               <SupervisorAccountIcon sx={{ fontSize: 60 }} />
             </h1>
             <h2 className="flex-center text-3xl">What is Charity Week?</h2>
-            <p className="light flex-center text-center desc">Imperial College Charity Week is an annual campaign that comprises of
+            <p className="light flex-center text-center desc w-4/6 mx-auto">Imperial College Charity Week is an annual campaign that comprises of
               everything
               from activities and challenges to talks and bucket collections. The proceeds raised go towards many
               noble causes around the world.</p>
@@ -41,7 +42,7 @@ const Home = () => {
               <SearchIcon sx={{ fontSize: 60 }} />
             </h1>
             <h2 className="flex-center text-3xl">Our vision</h2>
-            <p className="light flex-center text-center desc">Through CW, we envision a vehicle to spread Dawah across campus and beyond.
+            <p className="light flex-center text-center desc w-4/6 mx-auto">Through CW, we envision a vehicle to spread Dawah across campus and beyond.
               We wish to ensure the true message of CW lives beyond the initial hype of the campaign and the
               efforts of charity continue long into the future. </p>
             <p>&nbsp;</p>
@@ -54,18 +55,21 @@ const Home = () => {
               <AccessibilityNewIcon sx={{ fontSize: 60 }} />
             </h1>
             <h2 className="flex-center text-3xl">How you can help</h2>
-            <p className="light flex-center text-center desc">From tutoring at our admissions days and coming along to our Thames Bridges
+            <p className="light flex-center text-center desc w-4/6 mx-auto">From tutoring at our admissions days and coming along to our Thames Bridges
               Trek
               to taking part in our online quizzes and virtual auction dinner, your time and dedication will
               make all the difference </p>
           </div>
         </div>
       </div>
-      <div className="flex flex-center pt-20">
+      <div className="flex flex-center pt-20 -mb-10">
         <video width="75%" height="75%" controls>
           <source src="/assets/videos/trailer-2021.mp4" type="video/mp4" />
         </video>
       </div>
+    </section>
+    <section className="w-full mb-10 pt-24 -mt-20" id="events">
+      <Events />
     </section>
       </div>
     </section>
