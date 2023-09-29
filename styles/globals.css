@@ -350,3 +350,13 @@ scroll-behavior: smooth!important;
   background-color: rgba(0, 0, 0, .5);
   box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
+
+.email {
+   color: #1e88e5;
+   transition: 0.4s;
+}
+
+.email:hover {
+   color: #f57c00;
+   transition: 0.25s;
+}
