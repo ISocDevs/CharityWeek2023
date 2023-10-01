@@ -85,6 +85,7 @@ const Home = () => {
         <Sponsors />
       </div>
     </section>
+  </>
   )
 }
 
