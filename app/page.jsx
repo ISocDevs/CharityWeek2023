@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import Events from "@components/Events";
 import Contact from "@components/Contact";
+import Sponsors from "@components/Sponsors";
 
 
 const Home = () => {
@@ -69,13 +70,19 @@ const Home = () => {
         </video>
       </div>
     </section>
-    <section className="w-full mb-10 pt-24 -mt-20" id="events">
+    <section className="w-full pt-24 -mt-20" id="events">
       <Events />
     </section>
-    <section className="w-full flex-center flex-col mb-10 pt-40 -mt-20" id="contact">
+    <section className="w-full flex-center flex-col mb-10 -mt-20 pt-20" id="contact">
       <h2 className="text-center text-orange-500 text-4xl mb-5 head_text orange_gradient">Contact Us</h2>
       <div>
         <Contact />
+      </div>
+    </section>
+    <section className="w-full flex-center flex-col mb-10 pt-20 -mt-20" id="sponsors">
+      <h2 className="text-center text-orange-500 text-4xl mb-5 head_text orange_gradient">Our Sponsors</h2>
+      <div className="w-full">
+        <Sponsors />
       </div>
     </section>
   )
