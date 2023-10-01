@@ -53,7 +53,10 @@ const Nav = () => {
             const pre_el = document.querySelector('#' + prev.toLowerCase())
             return (Math.abs(el.getBoundingClientRect().top - 0) <= Math.abs(pre_el.getBoundingClientRect().top - 0) ? curr : prev)
         })
-        setActiveTab('#' + closestTab.toLowerCase())
+        try {
+            setActiveTab('#' + closestTab.toLowerCase())
+        } catch {
+        }
     }, [clientWindowHeight])
 
     return (
