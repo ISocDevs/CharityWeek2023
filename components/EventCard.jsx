@@ -8,6 +8,7 @@ const EventCard = ({ title, desc, photo }) => {
                     width={600}
                     height={225}
                     src={photo}
+                    alt={title}
                 />
             </div>
             <div className="text-4xl text-zinc-50 text-shadow relative mt-[-50px] mb-[40px] pl-[5px]">

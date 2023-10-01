@@ -29,7 +29,8 @@ const SponsorCard = ({ name, image, link }) => {
                     <Image src={image}
                         width={100}
                         height={100}
-                        style={{ width: "100%", height: "auto" }} />
+                        style={{ width: "100%", height: "auto" }}
+                        alt={name} />
                 </div>
                 <div className="text-center desc">
                     {name}
