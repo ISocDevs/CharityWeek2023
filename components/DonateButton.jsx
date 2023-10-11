@@ -1,11 +1,13 @@
 import Link from 'next/link'
 
-const DonateButton = ({pulse, style}) => {
+const DonateButton = ({ pulse, style }) => {
   return (
-      <div>
-          <Link href='/' className={`btn ${style ? style : ''}`}>
-              Donate
-          </Link>
+    <div>
+      <Link href='https://charityweek.islamic-relief.org.uk/london/imperial-college-london'
+        target="_blank"
+        className={`btn ${style ? style : ''}`}>
+        Donate
+      </Link>
     </div>
   )
 }

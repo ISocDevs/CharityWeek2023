@@ -360,3 +360,7 @@ scroll-behavior: smooth!important;
    color: #f57c00;
    transition: 0.25s;
 }
+
+.social-icon{
+  background-color: var(--bg);
+}

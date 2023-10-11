@@ -13,7 +13,7 @@ const Nav = () => {
     const [activeTab, setActiveTab] = useState('')
     const [toggleDropdown, setToggleDropdown] = useState(false);
     const [clientWindowHeight, setClientWindowHeight] = useState("")
-    const tabs = ['Home', 'About', 'Events', 'Contact', 'Sponsors', 'Socials']
+    const tabs = ['Home', 'About', 'Events', 'Contact', 'Sponsors']
 
     const scrollToSection = (sectionId) => {
         const section = document.querySelector(sectionId);
@@ -60,14 +60,14 @@ const Nav = () => {
     // }, [clientWindowHeight])
 
     return (
-        <nav className='flex-center z-30 flex-shrink-0 w-full py-2 fixed lg:px-10 px-2 min-[800px]:top-0 max-[799px]:bottom-0 backdrop-blur bg-white/20 shadow-lg'>
+        <nav className='flex-center z-30 flex-shrink-0 w-full fixed lg:px-10 px-2 min-[800px]:top-0 max-[799px]:bottom-0 backdrop-blur bg-white/20 shadow-lg'>
             {/* Logo */}
             <Link href="/" className='flex gap-2 flex-center'>
                 <Image
-                    src="/assets/images/cw-logo-orange.ico"
+                    src="/assets/images/CW23_logo_notext.png"
                     alt="Charity Week Logo"
-                    width={65}
-                    height={65}
+                    width={120}
+                    height={120}
                     className="object-contain"
                 />
                 <p className='logo_text pr-5'>CW 2023</p>
@@ -90,8 +90,8 @@ const Nav = () => {
                 <Image
                     src="/assets/images/cw-logo-orange.ico"
                     alt="Charity Week Logo"
-                    width={65}
-                    height={65}
+                    width={120}
+                    height={120}
                     className="object-contain"
                 />
                 <p className='logo_text pr-5'>CW 2023</p>

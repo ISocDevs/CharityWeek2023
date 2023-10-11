@@ -5,6 +5,7 @@ import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import Events from "@components/Events";
 import Contact from "@components/Contact";
 import Sponsors from "@components/Sponsors";
+import Socials from "@components/Socials";
 
 
 const Home = () => {
@@ -12,10 +13,10 @@ const Home = () => {
     <section id="home" className='w-full flex-center flex-col mb-10 pt-40'>
       <h1 className='head_text text-center'>
         <div>Welcome to</div>
-        <div className='orange_gradient'>ICL Charity Week 2023!</div>
+        <div className='blue_gradient'>ICL Charity Week 2023!</div>
       </h1>
       <div>
-        <p className="desc text-center">Last year we raised £39,504.92 for schools, health centres and orphans around
+        <p className="desc text-center">Last year we raised £53,935.45 for schools, health centres and orphans around
           the world</p>
         <div className="flex-center my-10">
           <DonateButton style='pulse large' />
@@ -70,21 +71,26 @@ const Home = () => {
         </video>
       </div>
     </section>
-    <section className="w-full pt-24 -mt-20" id="events">
+    <section className="w-full pt-40 -mt-40" id="events">
       <Events />
     </section>
-    <section className="w-full flex-center flex-col mb-10 -mt-20 pt-20" id="contact">
+    <section className="w-full flex-center flex-col mb-10 pt-40 -mt-40" id="contact">
       <h2 className="text-center text-orange-500 text-4xl mb-5 head_text orange_gradient">Contact Us</h2>
       <div>
         <Contact />
       </div>
     </section>
-    <section className="w-full flex-center flex-col mb-10 pt-20 -mt-20" id="sponsors">
+    <section className="w-full flex-center flex-col mb-10 pt-24 -mt-20" id="sponsors">
       <h2 className="text-center text-orange-500 text-4xl mb-5 head_text orange_gradient">Our Sponsors</h2>
       <div className="w-full">
         <Sponsors />
       </div>
     </section>
+    {/* <section className="w-full flex-center flex-col mb-10 pt-10 " id="socials">
+      <div className="w-full">
+        <Socials />
+      </div>
+    </section> */}
   </>
   )
 }
