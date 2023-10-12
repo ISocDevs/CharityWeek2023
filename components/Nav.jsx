@@ -47,17 +47,17 @@ const Nav = () => {
         };
     }, []);
 
-    // useEffect(() => {
-    //     const closestTab = tabs.reduce((prev, curr) => {
-    //         const el = document.querySelector('#' + curr.toLowerCase())
-    //         const pre_el = document.querySelector('#' + prev.toLowerCase())
-    //         return (Math.abs(el.getBoundingClientRect().top - 0) <= Math.abs(pre_el.getBoundingClientRect().top - 0) ? curr : prev)
-    //     })
-    //     try {
-    //         setActiveTab('#' + closestTab.toLowerCase())
-    //     } catch {
-    //     }
-    // }, [clientWindowHeight])
+    useEffect(() => {
+        try {
+            const closestTab = tabs.reduce((prev, curr) => {
+                const el = document.querySelector('#' + curr.toLowerCase())
+                const pre_el = document.querySelector('#' + prev.toLowerCase())
+                return (Math.abs(el.getBoundingClientRect().top - 0) <= Math.abs(pre_el.getBoundingClientRect().top - 0) ? curr : prev)
+            })
+            setActiveTab('#' + closestTab.toLowerCase())
+        } catch {
+        }
+    }, [clientWindowHeight])
 
     return (
         <nav className='flex-center z-30 flex-shrink-0 w-full fixed lg:px-10 px-2 min-[800px]:top-0 max-[799px]:bottom-0 backdrop-blur bg-white/20 shadow-lg'>
