@@ -14,7 +14,7 @@ const Event = ({ title, icon, onMouseEnter, onMouseLeave }) => {
             <div className="py-5 gap"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
-                <div className="text-orange-500 eventIcon">
+                <div className="text-green-600 eventIcon">
                     {icon}
                 </div>
                 <div className={`py-5 bg-amber-500/50 border-black border-2 eventTab pl-5 rounded-lg overflow-visible`}

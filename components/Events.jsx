@@ -39,7 +39,7 @@ const Events = () => {
 
     return (
         <>
-            <h2 className="text-center text-orange-500 text-4xl mb-5 head_text orange_gradient">Events</h2>
+            <h2 className="text-center text-green-600 text-4xl mb-5 head_text green_gradient">Events</h2>
             <div className="lg:grid lg:grid-cols-2">
                 <div className="overflow-y-scroll h-5/6 mr-20 overflow-x-visible">
                     {events.map(event => (

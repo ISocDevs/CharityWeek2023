@@ -80,7 +80,7 @@ const Nav = () => {
                         {tabs.map(tab =>
                             <Tab name={tab} scrollToSection={scrollToSection} key={tab} style='btn' />)}
                     </NavbarContext.Provider>
-                    <DonateButton style={'orange'} />
+                    <DonateButton style={'green'} />
                 </div>
             </div>
 

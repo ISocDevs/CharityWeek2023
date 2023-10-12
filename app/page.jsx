@@ -13,7 +13,7 @@ const Home = () => {
     <section id="home" className='w-full flex-center flex-col mb-10 pt-40'>
       <h1 className='head_text text-center'>
         <div>Welcome to</div>
-        <div className='blue_gradient'>ICL Charity Week 2023!</div>
+        <div className='green_gradient'>ICL Charity Week 2023!</div>
       </h1>
       <div>
         <p className="desc text-center">Last year we raised £53,935.45 for schools, health centres and orphans around
@@ -75,13 +75,13 @@ const Home = () => {
       <Events />
     </section>
     <section className="w-full flex-center flex-col mb-10 pt-40 -mt-40" id="contact">
-      <h2 className="text-center text-orange-500 text-4xl mb-5 head_text orange_gradient">Contact Us</h2>
+      <h2 className="text-center text-4xl mb-5 head_text green_gradient">Contact Us</h2>
       <div>
         <Contact />
       </div>
     </section>
     <section className="w-full flex-center flex-col mb-10 pt-24 -mt-20" id="sponsors">
-      <h2 className="text-center text-orange-500 text-4xl mb-5 head_text orange_gradient">Our Sponsors</h2>
+      <h2 className="text-center text-4xl mb-5 head_text green_gradient">Our Sponsors</h2>
       <div className="w-full">
         <Sponsors />
       </div>

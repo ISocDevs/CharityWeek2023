@@ -98,8 +98,12 @@ scroll-behavior: smooth!important;
   @apply bg-orange-500 hover:text-orange-500 hover:bg-white hover:border-orange-500
 }
 
+.btn.green{
+  @apply bg-green-600 hover:text-green-600 hover:bg-white hover:border-green-600
+}
+
 .btn.active{
-  @apply border-orange-500
+  @apply border-green-600
 }
 
 .outline_btn {
@@ -115,7 +119,7 @@ scroll-behavior: smooth!important;
 }
 
 .green_gradient {
-  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-green-500 via-green-700 to-green-500 bg-clip-text text-transparent;
 }
 
 .blue_gradient {
@@ -166,7 +170,7 @@ scroll-behavior: smooth!important;
 }
 
 .dropdown_link {
-  @apply text-base font-inter text-orange-500 hover:text-gray-500 font-medium py-2;
+  @apply text-base font-inter text-green-600 hover:text-gray-500 font-medium py-2;
 }
 
 /* PromptCard Component */
@@ -215,7 +219,7 @@ scroll-behavior: smooth!important;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: orange;
+  background-color: green;
   border-radius: inherit;
   -webkit-transition: opacity .3s, -webkit-transform .3s;
   transition: opacity .3s, -webkit-transform .3s;
@@ -357,7 +361,7 @@ scroll-behavior: smooth!important;
 }
 
 .email:hover {
-   color: #f57c00;
+   color: green;
    transition: 0.25s;
 }
 
