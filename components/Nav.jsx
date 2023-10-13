@@ -64,7 +64,7 @@ const Nav = () => {
             {/* Logo */}
             <Link href="/" className='flex gap-2 flex-center'>
                 <Image
-                    src="/assets/images/CW23_logo_notext.png"
+                    src="/assets/images/CW23_logo_notext_cropped_scaled.png"
                     alt="Charity Week Logo"
                     width={120}
                     height={120}

@@ -10,6 +10,9 @@ export const metadata = {
 const RootLayout = ({ children }) => {
     return (
         <html lang='en'>
+            <head>
+                <link rel='icon' href='/assets/images/CW23_logo_notext_cropped.png' />
+            </head>
             <body>
                 <Providers>
                     <div className='main'>

@@ -7,13 +7,13 @@ const rows = [
     {
         key: "1",
         type: ["Email"],
-        link: [<a class="email"
+        link: [<a className="email"
             href="mailto:imperialcharityweek2023@gmail.com?subject=Charity Week">imperialcharityweek2023@gmail.com</a>],
     },
     {
         key: "2",
         type: ["Instagram"],
-        link: [<a class="email"
+        link: [<a className="email"
             href="https://www.instagram.com/imperialcollegecw/">@imperialcollegecw</a>],
     },
 ];

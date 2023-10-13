@@ -8,7 +8,7 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import KebabDiningIcon from '@mui/icons-material/KebabDining';
 import EventCard from "@components/EventCard";
 import { useState } from "react";
-import DonateButton from "./DonateButton";
+import Image from "next/image";
 
 const Events = () => {
     const [showPreview, setShowPreview] = useState(null);
@@ -40,7 +40,7 @@ const Events = () => {
     return (
         <>
             <h2 className="text-center text-green-600 text-4xl mb-5 head_text green_gradient">Events</h2>
-            <div className="lg:grid lg:grid-cols-2">
+            {/* <div className="lg:grid lg:grid-cols-2">
                 <div className="overflow-y-scroll h-5/6 mr-20 overflow-x-visible">
                     {events.map(event => (
                         <div key={event.id}
@@ -60,9 +60,24 @@ const Events = () => {
                             photo={events[+showPreview - 1]["photo"]} />
                     }</> : <>Default</>}
                 </div>
+            </div> */}
+            <div className="showcase">
+                {events.map(event => <Showbox event={event} />)}
             </div>
         </>
     )
+}
+
+const Showbox = ({ event }) => {
+    return (
+        <div className={`showbox ${'box' + event.id}`} data-text={event.title}>
+            <Image src={event.photo}
+                objectFit="cover"
+                layout="fill"
+                quality={100}
+                alt="lmao"
+            />
+        </div>)
 }
 
 export default Events
