@@ -80,8 +80,8 @@ const Home = () => {
         <Contact />
       </div>
     </section>
-    <section className="w-full flex-center flex-col mb-10 pt-24 -mt-20" id="sponsors">
-      <h2 className="text-center text-4xl mb-5 head_text green_gradient">Our Sponsors</h2>
+    <section className="w-full flex-center flex-col mb-10 pt-40 -mt-28" id="sponsors">
+      <h2 className="text-center text-4xl mb-12 head_text green_gradient">Our Sponsors</h2>
       <div className="w-full">
         <Sponsors />
       </div>

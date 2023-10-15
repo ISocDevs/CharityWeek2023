@@ -126,6 +126,10 @@ scroll-behavior: smooth!important;
   @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
 
+.pink_gradient {
+  @apply bg-gradient-to-r from-pink-200 to-pink-400;
+}
+
 .desc {
   @apply mt-5 text-lg text-gray-600 sm:text-xl ;
 }
@@ -415,7 +419,7 @@ scroll-behavior: smooth!important;
 .showbox:hover::after {
   transform: translateY(0);
   opacity: 1;
-  transition-delay: 400ms;
+  transition-delay: 100ms;
 }
 
 .showcase .showbox:hover{
