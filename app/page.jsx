@@ -71,7 +71,7 @@ const Home = () => {
         </video>
       </div>
     </section>
-    <section className="w-full pt-40 -mt-40" id="events">
+    <section className="w-full pt-28 -mt-32" id="events">
       <Events />
     </section>
     <section className="w-full flex-center flex-col mb-10 pt-40 -mt-40" id="contact">

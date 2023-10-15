@@ -40,27 +40,6 @@ const Events = () => {
     return (
         <>
             <h2 className="text-center text-green-600 text-4xl mb-5 head_text green_gradient">Events</h2>
-            {/* <div className="lg:grid lg:grid-cols-2">
-                <div className="overflow-y-scroll h-5/6 mr-20 overflow-x-visible">
-                    {events.map(event => (
-                        <div key={event.id}
-                        >
-                            <Event title={event.title} icon={event.icon}
-                                onMouseEnter={() => handleMouseEnter(event.id)}
-                                onMouseLeave={handleMouseLeave}
-                                hovered={showPreview === event.id} />
-                        </div>
-                    ))}
-                </div>
-                <div className="flex flex-center -ml-40  h-5/6 max-lg:hidden">
-                    {showPreview ? <>{
-                        <EventCard
-                            title={events[+showPreview - 1]["title"]}
-                            desc={events[+showPreview - 1]["desc"]}
-                            photo={events[+showPreview - 1]["photo"]} />
-                    }</> : <>Default</>}
-                </div>
-            </div> */}
             <div className="showcase">
                 {events.map(event => <Showbox event={event} />)}
             </div>

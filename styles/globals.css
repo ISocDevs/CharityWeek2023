@@ -373,23 +373,20 @@ scroll-behavior: smooth!important;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  /* -webkit-transform:translate3d(0,0,0);
-  -webkit-backface-visibility: none; */
   gap: 1em;
   width:100%;
   height: 60vh;
   padding: 0px 1em;
+  margin-top: 4em;
+  margin-bottom: 4em;
   transition: all 400ms;
+  -webkit-transition: all 400ms;
 }
 
 .showbox {
   position: relative;
-  /* background: var(--img) center center; */
-  /* background-size: cover; */
-  /* z-index: -1; */
-  /* -webkit-transform:translate3d(0,0,0);
-  -webkit-backface-visibility: none; */
   transition: all 400ms;
+  -webkit-transition: all 400ms;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -407,6 +404,8 @@ scroll-behavior: smooth!important;
   transform: translateY(60px);
   opacity: 0;
   transition: all 400ms;
+  -webkit-transition: all 400ms;
+
 }
 
 .showcase:hover .showbox{
@@ -421,8 +420,10 @@ scroll-behavior: smooth!important;
 
 .showcase .showbox:hover{
   filter: grayscale(0%) opacity(100%);
-  
 }
+/* .showcase:hover{
+  grid-template-columns: 1fr 1fr 1fr;
+} */
 /* i tried to not do it like this but i couldnt find a working solution */
 .showcase:has(.box1:hover){
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
