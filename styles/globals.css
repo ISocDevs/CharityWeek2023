@@ -314,6 +314,36 @@ scroll-behavior: smooth!important;
   background-color: var(--bg);
 }
 
+.test {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  width:100%;
+  height: 100vh;
+  padding: 0px 1em;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  transition: all 400ms;
+}
+.test .showbox::after {
+  content: attr(data-text);
+  position: absolute;
+  white-space: pre;
+  text-align: center;
+  bottom: 20px;
+  background: black;  
+  color: white;
+  padding: 10px 10px 10px 14px;
+  /* letter-spacing: 4px; */
+  text-transform: uppercase;
+  font-size: 2.1vw;
+  transform: translateY(30px);
+  /* opacity: 0; */
+  transition: all 400ms;
+  -webkit-transition: all 400ms;
+}
+
 .showcase {
   position: relative;
   display: grid;
@@ -337,7 +367,7 @@ scroll-behavior: smooth!important;
   align-items: center;
 }
 
-.showbox::after {
+.showcase .showbox::after {
   content: attr(data-text);
   position: absolute;
   white-space: pre;
@@ -350,11 +380,12 @@ scroll-behavior: smooth!important;
   text-transform: uppercase;
   transform: translateY(60px);
   opacity: 0;
+  /* font-size: 1vw; */
   transition: all 400ms;
   -webkit-transition: all 400ms;
 }
 
-.showbox:hover::after {
+.showcase .showbox:hover::after {
   transform: translateY(0);
   opacity: 1;
   transition-delay: 100ms;
@@ -370,7 +401,7 @@ scroll-behavior: smooth!important;
 
 /* i tried to not do it like this but i couldnt find a working solution */
 .showcase:has(.box1:hover){
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .showcase:has(.box2:hover){
   grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -404,10 +435,10 @@ scroll-behavior: smooth!important;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
 }
 
-.showbox:nth-child(odd){
+.showcase .showbox:nth-child(odd){
   transform: translateY(-16px);
 }
-.showbox:nth-child(even){
+.showcase .showbox:nth-child(even){
   transform: translateY(16px);
 }
 

@@ -18,7 +18,10 @@ const Events = () => {
     return (
         <>
             <h2 className="text-center text-green-600 text-4xl mb-5 head_text green_gradient">Events</h2>
-            <div className="showcase">
+            <div className="showcase max-[799px]:hidden">
+                {events.map(event => <Showbox event={event} />)}
+            </div>
+            <div className="test min-[799px]:hidden">
                 {events.map(event => <Showbox event={event} />)}
             </div>
         </>

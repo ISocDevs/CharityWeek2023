@@ -62,12 +62,22 @@ const Nav = () => {
     return (
         <nav className='flex-center z-30 flex-shrink-0 w-full fixed lg:px-10 px-2 min-[800px]:top-0 max-[799px]:bottom-0 backdrop-blur bg-white/20 shadow-lg'>
             {/* Logo */}
-            <Link href="/" className='flex gap-2 flex-center'>
+            <Link href="/" className='flex gap-2 flex-center max-[799px]:hidden'>
                 <Image
                     src="/assets/images/CW23_logo_notext_cropped_scaled.png"
                     alt="Charity Week Logo"
                     width={120}
                     height={120}
+                    className="object-contain"
+                />
+                <p className='logo_text pr-5'>CW 2023</p>
+            </Link>
+            <Link href="/" className='flex gap-2 flex-center min-[799px]:hidden'>
+                <Image
+                    src="/assets/images/CW23_logo_notext_cropped_scaled.png"
+                    alt="Charity Week Logo"
+                    width={60}
+                    height={60}
                     className="object-contain"
                 />
                 <p className='logo_text pr-5'>CW 2023</p>

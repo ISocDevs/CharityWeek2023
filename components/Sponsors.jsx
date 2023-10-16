@@ -23,7 +23,7 @@ const Sponsors = () => {
 
 const SponsorCard = ({ sponsor }) => {
     return (
-        <div className=" lg:w-1/5 max-lg:w-[220px] shadow-xl hover:shadow-2xl transition-shadow">
+        <div className=" lg:w-1/5 min-w-[220px] shadow-xl hover:shadow-2xl transition-shadow">
             <div className="relative w-full">
                 {sponsor.ad &&
                     (<div className="z-10 absolute w-full text-center -translate-y-4">
