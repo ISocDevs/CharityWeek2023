@@ -340,6 +340,8 @@ scroll-behavior: smooth!important;
 .showbox::after {
   content: attr(data-text);
   position: absolute;
+  white-space: pre;
+  text-align: center;
   bottom: 20px;
   background: black;  
   color: white;
@@ -350,11 +352,6 @@ scroll-behavior: smooth!important;
   opacity: 0;
   transition: all 400ms;
   -webkit-transition: all 400ms;
-
-}
-
-.showcase:hover .showbox{
-  filter: grayscale(100%) opacity(24%);
 }
 
 .showbox:hover::after {
@@ -363,12 +360,14 @@ scroll-behavior: smooth!important;
   transition-delay: 100ms;
 }
 
+
+.showcase:hover .showbox{
+  filter: grayscale(100%) opacity(24%);
+}
 .showcase .showbox:hover{
   filter: grayscale(0%) opacity(100%);
 }
-/* .showcase:hover{
-  grid-template-columns: 1fr 1fr 1fr;
-} */
+
 /* i tried to not do it like this but i couldnt find a working solution */
 .showcase:has(.box1:hover){
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
