@@ -1,22 +1,24 @@
 import Image from "next/image"
+import ComingSoon from "./ComingSoon"
+
+
+export const sponsors = [
+    // { key: 1, name: "Bubble CiTea", image: "/assets/images/bubble_citea_logo.jpg", link: "https://www.bubblecitea.com/menu/" },
+    // { key: 2, name: "MooBoo", image: "/assets/images/mooboo_logo.jpg", link: "https://www.mooboo.co", ad: "11% Student Discount!" },
+    // { key: 3, name: "Love Crafts Crochet", image: "/assets/images/lovecrafts_logo.png", link: "https://www.tariqhalalmeats.com/", ad: "Check out their YouTube channel!", adlink: "https://youtube.com/@lovecraftscom?si=Fnny8prRJPcD01be" },
+    // { key: 4, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
+    // { key: 5, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
+    // { key: 6, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
+    // { key: 7, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
+]
 
 const Sponsors = () => {
-
-    const sponsors = [
-        { key: 1, name: "Bubble CiTea", image: "/assets/images/bubble_citea_logo.jpg", link: "https://www.bubblecitea.com/menu/" },
-        { key: 2, name: "MooBoo", image: "/assets/images/mooboo_logo.jpg", link: "https://www.mooboo.co", ad: "11% Student Discount!" },
-        { key: 3, name: "Love Crafts Crochet", image: "/assets/images/lovecrafts_logo.png", link: "https://www.tariqhalalmeats.com/", ad: "Check out their YouTube channel!", adlink: "https://youtube.com/@lovecraftscom?si=Fnny8prRJPcD01be" },
-        // { key: 4, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
-        // { key: 5, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
-        // { key: 6, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
-        // { key: 7, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
-    ]
-
     return (
         <div className="flex flex-row flex-wrap gap-5 mx-10 flex-center">
-            {sponsors.map(sponsor => (
+            {sponsors.length > 0 ? sponsors.map(sponsor => (
                 <SponsorCard sponsor={sponsor} />
-            ))}
+            )) :
+                <ComingSoon />}
         </div>
     )
 }

@@ -130,6 +130,24 @@ scroll-behavior: smooth!important;
   @apply bg-gradient-to-r from-pink-200 to-pink-400;
 }
 
+.pink_text {
+  @apply pink_gradient bg-clip-text text-transparent
+}
+/* didnt work :/ */
+/* @keyframes GradientAnimation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+} */
+
+.coming_soon {
+  @apply pink_text animate-pulse;
+  /* animation: GradientAnimation 5s ease infinite; */
+
+}
+
+
+
 .desc {
   @apply mt-5 text-lg text-gray-600 sm:text-xl ;
 }

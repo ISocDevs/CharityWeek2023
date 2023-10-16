@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import Events from "@components/Events";
 import Contact from "@components/Contact";
-import Sponsors from "@components/Sponsors";
+import Sponsors, { sponsors } from "@components/Sponsors";
 import Socials from "@components/Socials";
 
 
@@ -81,7 +81,7 @@ const Home = () => {
       </div>
     </section>
     <section className="w-full flex-center flex-col mb-10 pt-40 -mt-28" id="sponsors">
-      <h2 className="text-center text-4xl mb-12 head_text green_gradient">Our Sponsors</h2>
+      <h2 className="text-center text-4xl mb-12 head_text green_gradient">Our Sponsor{sponsors.length === 1 ? '' : 's'}</h2>
       <div className="w-full">
         <Sponsors />
       </div>
