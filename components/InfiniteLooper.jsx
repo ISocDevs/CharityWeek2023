@@ -57,7 +57,7 @@ const InfiniteLooper = ({ speed, direction, children, }) => {
     }, [looperInstances, setupInstances]);
 
     return (
-        <div className="looper" ref={outerRef}>
+        <div className="looper overflow-none" ref={outerRef}>
             <div className="looper__innerList" ref={innerRef} data-animate="true">
                 {[...Array(looperInstances)].map((_, ind) => (
                     <div

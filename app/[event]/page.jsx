@@ -5,6 +5,7 @@ import Image from 'next/image'
 import InfiniteLooper from '@components/InfiniteLooper'
 import { promises as fs } from 'fs'
 import path from 'path'
+import DonateButton from '@components/DonateButton'
 
 const photogallery = async (folder) => {
     return await fs.readdir(imageDirectory).then(imageFilenames => {
@@ -33,9 +34,9 @@ const page = async ({ params }) => {
     // if (params.event != "trek") {
     //     return notFound()
     // }
-    return (<div className='flex flex-center'>
-        <div className='min-[800px]:mt-40 mt-10 w-3/5 h-fit min-w-[800px]'>
-            <div className="bg-gray-500/20 p-2 rounded">
+    return (<>
+        <section className='w-full flex-center flex-col mb-10 pt-40 overflow-hidden'>
+            <div className="bg-gray-500/20 p-2 rounded overflow-none">
                 <InfiniteLooper speed="10" direction="right">
                     {imageFilenames.length > 0 ? imageFilenames.map(img =>
                         <div className="relative px-1 h-[25vh]">
@@ -51,62 +52,13 @@ const page = async ({ params }) => {
 
                         </div>
                     ) : <p>lmao</p>}
-
-                    {/* <img src="https://i.stack.imgur.com/xckZy.jpg" alt="" /> */}
-                    {/* <img src="https://i.stack.imgur.com/CVgbr.jpg" alt="" />
-                <img src="https://i.stack.imgur.com/7c4yC.jpg" alt="" />
-                <img src="https://i.stack.imgur.com/RTiml.jpg" alt="" />
-                <img src="https://i.stack.imgur.com/xckZy.jpg" alt="" />
-                <img src="https://i.stack.imgur.com/CVgbr.jpg" alt="" />
-                <img src="https://i.stack.imgur.com/7c4yC.jpg" alt="" />
-                <img src="https://i.stack.imgur.com/RTiml.jpg" alt="" /> */}
                 </InfiniteLooper>
             </div>
             <div className="head_text text-center green_gradient mb-5">{event.title}</div>
             <hr />
             <div className="desc text-center">{event.desc}</div>
-        </div>
-
-    </div>
+        </section>
+    </>
     )
 }
-// <div className='flex flex-center bg-green-700'>
-//     <div className='min-[800px]:mt-40 mt-10 w-3/5 h-fit bg-red-500'>
-// <div id="photobanner_container">
-//     <div className="photobanner">
-//         <img src="https://i.stack.imgur.com/xckZy.jpg" alt="" />
-//         <img src="https://i.stack.imgur.com/CVgbr.jpg" alt="" />
-//         <img src="https://i.stack.imgur.com/7c4yC.jpg" alt="" />
-//         <img src="https://i.stack.imgur.com/RTiml.jpg" alt="" />
-//         <img src="https://i.stack.imgur.com/xckZy.jpg" alt="" />
-//         <img src="https://i.stack.imgur.com/CVgbr.jpg" alt="" />
-//         <img src="https://i.stack.imgur.com/7c4yC.jpg" alt="" />
-//         <img src="https://i.stack.imgur.com/RTiml.jpg" alt="" />
-//     </div>
-{/* </div> */ }
-{/* <div id="container">
-                    <div class="photobanner">
-                        <img src="https://i.stack.imgur.com/xckZy.jpg" alt="">
-                        <img src="https://i.stack.imgur.com/CVgbr.jpg" alt="">
-                        <img src="https://i.stack.imgur.com/7c4yC.jpg" alt="">
-                        <img src="https://i.stack.imgur.com/RTiml.jpg" alt="">
-                        <img src="https://i.stack.imgur.com/xckZy.jpg" alt="">
-                        <img src="https://i.stack.imgur.com/CVgbr.jpg" alt="">
-                        <img src="https://i.stack.imgur.com/7c4yC.jpg" alt="">
-                        <img src="https://i.stack.imgur.com/RTiml.jpg" alt="">
-                    </div>
-                </div> */}
-{/* // </div> */ }
-
-
-{/* <div className='relative aspect-video'>
-                    <Image
-                        src={event.photo}
-                        fill
-                        quality={100}
-                        style={{ objectFit: 'cover' }}
-                        alt={event.title} />
-                </div> */}
-// </div >
-
 export default page
