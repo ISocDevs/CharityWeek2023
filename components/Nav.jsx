@@ -126,7 +126,7 @@ const Tab = ({ name, scrollToSection, style }) => {
     const id = '#' + name.toLowerCase()
     const activeTab = useContext(NavbarContext)
     return (
-        <Link href={id}
+        <Link href={'/' + id}
             className={`${style ? style : ''} ${activeTab === id && 'active'}`}
             scroll={false}
             onClick={() => scrollToSection(id)}>
