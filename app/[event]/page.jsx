@@ -38,13 +38,14 @@ const page = async ({ params }) => {
             <div className="bg-gray-500/20 p-2 rounded">
                 <InfiniteLooper speed="10" direction="right">
                     {imageFilenames.length > 0 ? imageFilenames.map(img =>
-                        <div className="relative px-1">
+                        <div className="relative px-1 h-[25vh]">
                             <Image src={img}
-                                width={250}
+                                width={100}
                                 height={100}
-                                // fill
+
+                                // sizes='100vw'
                                 quality={100}
-                                style={{ borderRadius: '5%', objectFit: 'cover' }}
+                                style={{ borderRadius: '5%', objectFit: 'contain', width: 'auto', height: '100%' }}
                                 alt={event.title}
                             />
 
