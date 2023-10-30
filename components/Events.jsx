@@ -39,6 +39,7 @@ const Showbox = ({ event }) => {
             <Image src={event.photo}
                 objectFit="cover"
                 layout="fill"
+                priority
                 quality={100}
                 alt={event.title}
             />

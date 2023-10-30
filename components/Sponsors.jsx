@@ -6,8 +6,8 @@ export const sponsors = [
     // { key: 1, name: "Bubble CiTea", image: "/assets/images/bubble_citea_logo.jpg", link: "https://www.bubblecitea.com/menu/" },
     // { key: 2, name: "MooBoo", image: "/assets/images/mooboo_logo.jpg", link: "https://www.mooboo.co", ad: "11% Student Discount!" },
     // { key: 3, name: "Love Crafts Crochet", image: "/assets/images/lovecrafts_logo.png", link: "https://www.tariqhalalmeats.com/", ad: "Check out their YouTube channel!", adlink: "https://youtube.com/@lovecraftscom?si=Fnny8prRJPcD01be" },
-    // { key: 4, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
-    // { key: 5, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
+    { key: 4, name: "Chaiiwala", image: "/assets/images/sponsors/Chaiiwala.png", link: "https://www.chaiiwala.co.uk" },
+    { key: 5, name: "Asahi Motors", image: "/assets/images/sponsors/AsahiMotors.png", link: "https://www.asahigroup.co.uk" },
     // { key: 6, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
     // { key: 7, name: "Tariq Halal", image: "/assets/images/cw-pics/tariqhalal-logo.jpg", link: "https://www.tariqhalalmeats.com/" },
 ]
@@ -41,6 +41,7 @@ const SponsorCard = ({ sponsor }) => {
                         <Image src={sponsor.image}
                             fill
                             quality={100}
+                            priority
                             style={{ objectFit: 'cover' }}
                             alt={sponsor.name} />
                     </div>
