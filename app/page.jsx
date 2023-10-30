@@ -67,7 +67,7 @@ const Home = () => {
       </div>
       <div className="flex flex-center pt-20 -mb-10">
         <video width="75%" height="75%" controls>
-          <source src="/assets/videos/trailer-2021.mp4" type="video/mp4" />
+          <source src="/assets/videos/CWTRAILER.mp4" type="video/mp4" />
         </video>
       </div>
     </section>
