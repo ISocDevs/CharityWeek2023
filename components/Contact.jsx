@@ -6,15 +6,15 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKey
 const rows = [
     {
         key: "1",
-        type: ["Email"],
-        link: [<a className="email"
-            href="mailto:imperialcharityweek2023@gmail.com?subject=Charity Week">imperialcharityweek2023@gmail.com</a>],
+        type: "Email",
+        link: <a className="email"
+            href="mailto:imperialcharityweek2023@gmail.com?subject=Charity Week">imperialcharityweek2023@gmail.com</a>,
     },
     {
         key: "2",
-        type: ["Instagram"],
-        link: [<a className="email"
-            href="https://www.instagram.com/imperialcollegecw/">@imperialcollegecw</a>],
+        type: "Instagram",
+        link: <a className="email"
+            href="https://www.instagram.com/imperialcollegecw/">@imperialcollegecw</a>,
     },
 ];
 
@@ -29,12 +29,6 @@ const columns = [
     },
 ];
 
-// const columns_sm = [
-//     {
-//         key: "email",
-//         label: "Emails"
-//     }
-// ]
 
 export default function Contact() {
     return (
@@ -47,26 +41,12 @@ export default function Contact() {
                     <TableBody items={rows}>
                         {(item) => (
                             <TableRow key={item.key}>
-                                {(columnKey) => <TableCell className="text-lg">{getKeyValue(item, columnKey).map(el => (<div>{el}</div>))}</TableCell>}
+                                {(columnKey) => <TableCell className="text-lg">{getKeyValue(item, columnKey)}</TableCell>}
                             </TableRow>
                         )}
                     </TableBody>
                 </Table>
             </div>
-            {/* <div className="sm:hidden">
-                <Table aria-label="Example table with dynamic content" >
-                    <TableHeader columns={columns_sm} >
-                        {(column) => <TableColumn key={column.key} className="text-lg text-center">{column.label}</TableColumn>}
-                    </TableHeader>
-                    <TableBody items={rows}>
-                        {(item) => (
-                            <TableRow key={item.key}>
-                                {(columnKey) => <TableCell className="text-lg text-center">{getKeyValue(item, columnKey).map(el => (<div>{el}</div>))}</TableCell>}
-                            </TableRow>
-                        )}
-                    </TableBody>
-                </Table>
-            </div> */}
         </div>
     );
 }

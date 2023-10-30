@@ -365,7 +365,9 @@ scroll-behavior: smooth!important;
 .showcase {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  /* grid-template-columns: repeat(10, 1fr); */
+  grid-template-columns: var(--gtc);
   gap: 1em;
   width:100%;
   height: 60vh;
@@ -417,40 +419,12 @@ scroll-behavior: smooth!important;
   filter: grayscale(0%) opacity(100%);
 }
 
-/* i tried to not do it like this but i couldnt find a working solution */
-.showcase:has(.box1:hover){
-  grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.showcase:has(.box2:hover){
-  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+$num_events: 10;
 
-}
-.showcase:has(.box3:hover){
-  grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.showcase:has(.box4:hover){
-  grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.showcase:has(.box5:hover){
-  grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.showcase:has(.box6:hover){
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
-}
-.showcase:has(.box7:hover){
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr 1fr;
-}
-.showcase:has(.box8:hover){
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
-}
-.showcase:has(.box9:hover){
- grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr 1fr;
-}
-.showcase:has(.box10:hover){
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
-}
-.showcase:has(.box11:hover){
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+@for $i from 1 through $num_events{
+  .showcase:has(.box#{$i}:hover){
+    grid-template-columns: var(--box#{$i});
+} 
 }
 
 .showcase .showbox:nth-child(odd){
